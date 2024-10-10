@@ -1,4 +1,5 @@
 #include "mergesort.h"
+#include <stdlib.h> // Needed for calloc and free
 
 // Remember that a key goal here is to learn to use
 // `malloc/calloc` and `free`, so make sure you explicitly
@@ -14,8 +15,8 @@ void mergesort(int size, int values[]){
 
     // Split the array into two halves.
     int mid = size / 2;
-    int *left = calloc(mid, sizeof(int));         // Allocate memory for the left half.
-    int *right = calloc(size - mid, sizeof(int)); // Allocate memory for the right half.
+    int *left = (int*)calloc(mid, sizeof(int));         // Allocate memory for the left half.
+    int *right = (int*)calloc(size - mid, sizeof(int)); // Allocate memory for the right half.
 
     // Copy data to the left and right arrays
     for (int i = 0; i < mid; i++)

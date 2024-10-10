@@ -6,5 +6,6 @@
 #define UNIT_TESTING
 
 void mergesort(int size, int values[]);
+void merge(int size, int values[], int left[], int right[]);
 
 #endif
