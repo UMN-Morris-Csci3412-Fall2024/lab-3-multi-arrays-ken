@@ -3,11 +3,16 @@
         "cmake",
         "exitcode",
         "gtest",
+        "inlist",
         "ints",
         "lgtest",
         "libgtest",
         "mergesort",
+        "pseudocode",
         "pthread",
         "valgrind"
-    ]
+    ],
+    "files.associations": {
+        "mergesort.h": "c"
+    }
 }
