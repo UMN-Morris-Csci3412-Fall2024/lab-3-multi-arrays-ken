@@ -8,8 +8,7 @@
 
 void mergesort(int size, int values[]){
     // Base case: if the array has fewer than 2 elements, it's already sorted.
-    if (size <= 1)
-    {
+    if (size <= 1){
         return;
     }
 
@@ -17,14 +16,13 @@ void mergesort(int size, int values[]){
     int mid = size / 2;
     int *left = (int*)calloc(mid, sizeof(int));         // Allocate memory for the left half.
     int *right = (int*)calloc(size - mid, sizeof(int)); // Allocate memory for the right half.
+    // left and right threw errors w/o casting to (int*)
 
     // Copy data to the left and right arrays
-    for (int i = 0; i < mid; i++)
-    {
+    for (int i = 0; i < mid; i++){
         left[i] = values[i];
     }
-    for (int i = mid; i < size; i++)
-    {
+    for (int i = mid; i < size; i++){
         right[i - mid] = values[i];
     }
 
